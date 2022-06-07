@@ -1,0 +1,243 @@
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties.
+#spring.datasource.url = jdbc:mysql://dev-vestige-vestigedb.c63tfr0piamf.ap-southeast-1.rds.amazonaws.com:3306/vestige_wms?useSSL=false
+#spring.datasource.driverClassName=com.mysql.jdbc.Driver
+#spring.datasource.username = dev_wmsuser
+#spring.datasource.password = vestige123
+server.port=80
+tablePrefixAndDNS=dev
+bypassauthorization=true
+
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+
+# Hibernate ddl auto (create, create-drop, validate, update) or used for database initialization.
+#spring.jpa.hibernate.ddl-auto = update
+
+# Show or not log for each sql query
+#spring.jpa.show-sql = true
+
+# Enable response compression
+server.compression.enabled=true
+
+# The comma-separated list of mime types that should be compressed
+server.compression.mime-types=text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+
+# Compress the response only if the response size is at least 1KB
+server.compression.min-response-size=1024
+# Enable HTTP/2 support, if the current environment supports it
+server.http2.enabled=true
+
+# InputValidation
+inputValidation.error Validation Failed, Please check for 
+
+
+#Zone
+zone.insert.error Unable to save, Zone id is already exist 
+zone.insert.error.code Unable to save, Zone Code is already exist
+zone.insert.success Successfully saved 
+zone.update.success Successfully saved
+zone.update.error.id Unable to save, Check Zone ID
+zone.delete.error  Zone not found for delete 
+zone.delete.success Zone deleted successfully
+
+#Zone Search
+zone.search.notFound No Record Found.
+zone.search.data Please provide search criteria.
+
+
+#Bin
+bin.insert.error.code Unable to save, Bin Code is already exist
+bin.insert.success Successfully saved 
+bin.update.success Successfully updated
+bin.update.error Unable to update, Bin not found 
+bin.delete.error  Bin not found for delete 
+bin.delete.success Bin deleted successfully
+bin.update.error.id Unable to update, Check Bin ID
+bin.existence.error Bin Id does not exist
+bin.sitelocation.error Invalid Site Location
+
+#Bin Search
+bin.search.notFound No Record Found
+bin.search.code Please specify bin code 
+bin.search.data Please mention some search criteria
+bin.item.validate Bin not empty
+zone.existence.error Zone Id does not exist
+
+#Courier
+courier.delete.error  Courier Details not found to delete 
+courier.delete.success Courier Details deleted successfully
+courier.insert.success Successfully saved courier details
+courier.insert.error.code Unable to save, Courier Code already exists
+courier.update.success Successfully updated courier details
+courier.update.error Unable to update the Courier details
+courier.update.error.id Unable to update, unique id/constraint missing
+courier.search.notFound Invalid search. Please check the search criteria
+
+#Grn
+grn.save.success Successfully saved 
+grn.existence.error Grn No. does not exist
+grn.update.error.id Unable to save, Check Grn No.
+grn.delete.error  Grn not found for delete 
+grn.delete.success Grn deleted successfully
+grn.delete.unable Unable to delete Grn
+grn.number.error Grn No. does not exist
+grn.details.delete.success Item Detail deleted successfully
+
+#Grn Search
+grn.search.notFound No record found.
+grn.search.data Please provide search criteria.
+batch.delete.success Batch details deleted successfully
+batch.existence.error Batch id does not exist
+batch.delete.error  Batch not found for delete 
+batch.delete.unable Unable to delete Batch Details
+batch.grnBatch.id Grn batch id not found
+details.grnDetails.id Grn item id not found
+details.grnServerDetails.unable unable to update PODetails
+details.grnDetails.update  unable to update GrnDetails
+grn.update.error  unable to update
+
+# Vendor Attachments
+vendor.attachment.upload.success Attachment uploaded successfuly
+vendor.attachment.vendorId.error VendorId not found
+vendor.attachment.upload.error Error in upload file
+vendor.getFiles.success Get All attachment successfully
+vendor.attachmentURL.error Vendor attachment URL is not valide
+vendor.attachment.delete.success Attachment deleted successfully
+vendor.attachment.delete.error Attachment not found to delete.
+ 
+
+input.statusType.code.error Status Code does not exist 
+
+#Vendors
+vendor.insert.error Unable to insert, Vendor id is already exist
+vendor.insert.success Successfully saved
+vendor.update.error Unable to update, Vendor not found
+vendor.delete.error  Vendor not found for delete
+vendor.delete.success Vendor deleted successfully
+vendor.existence.error Vendor does not exist
+
+# Vendor Search
+vendor.search.success Search Successfully
+vendor.search.error No record found 
+vendor.search.code Please specify vendor code 
+vendor.search.name Please specify vendor name
+vendor.search.mobile Please specify vendor mobile
+vendor.search.email Please specify vendor email
+vendor.search.status Please specify vendor status
+vendor.search.notFound No record found
+
+# VendorContacts
+vendor.contact.contactId ContactId is required
+vendor.contact.vendorRequired VendorId is required
+vendor.contact.contactRequired ContactId is require to delete Vendor Contact
+vendor.contact.insert.error Vendor contact is already exist
+vendor.contact.update.error Vendor contact not found for update
+vendor.contact.delete.error  Contact not found to delete
+vendor.contact.delete.success Vendor Contact deleted successfully
+vendor.contact.isPrimary.error PrimaryContact is already exist
+
+#PurchaseOrder
+purchaseOrder.insert.error Unable to insert, PO id is already exist
+purchaseOrder.insert.success Successfully saved
+purchaseOrder.update.error Unable to update, PurchaseOrder not found
+purchaseOrder.existence.error PurchaseOrder does not exist
+purchaseOrder.search.error No record found 
+purchaseOrder.po.statusId PO StatusId required
+purchaseOrder.po.status.success PO Status update successfully
+purchaseOrder.po.status.error Invalid PO status 
+
+# PurchaseOrder Details
+purchaseOrder.poDetails.itemId ItemId is required
+purchaseOrder.poDetails.update.error PurchaseOrder Details not found for update
+purchaseOrder.poDetails.PORequired PONumber is required 
+purchaseOrder.poDetails.delete.error  Detail not found to delete
+purchaseOrder.poDetails.delete.success PurchaseOrder Detail deleted successfully
+purchaseOrder.poDetails.error PO Details does not exist
+
+poDetails.file.import.success File imported Successfully
+poDetails.file.import.error File not imported Sorry!!!!!
+
+app.distributor.service.dnsname=distributorservice
+app.global.service.dnsname=globalservice
+app.integrationservice.dnsname=integrationservice
+app.inventory.service.dnsname=inventoryservice
+app.invoice.service.dnsname=invoiceservice
+app.item.service.dnsname=itemservice
+app.order.service.dnsname=orderservice
+app.pvbvdistributionservice.service.dnsname=pvbvdistributionservice
+app.pvbv.service.dnsname=pvbvservice
+app.user.service.dnsname=userservice
+app.common.service.dnsname=utilservice
+app.wms.service.dnsname=wmsservice
+app.purchaseorder.service.dnsname=purchaseorderservice
+app.localtion.service.dnsname=locationservice
+app.vendor.service.dnsname=vendorservice
+
+#spring.activemq.broker-url=failover:(ssl://b-fb64db9e-3756-4c1b-9918-d5cf28f6d891-1.mq.ap-southeast-1.amazonaws.com:61617,ssl://b-fb64db9e-3756-4c1b-9918-d5cf28f6d891-2.mq.ap-southeast-1.amazonaws.com:61617)
+#spring.activemq.broker-passive-url=ssl://b-fb64db9e-3756-4c1b-9918-d5cf28f6d891-2.mq.ap-southeast-1.amazonaws.com:61617
+#spring.activemq.username=admin
+#spring.activemq.password=vestige123456
+#distributor.resign.topic=distributor.resign.topic
+
+datasources.replicads.jdbcUrl= jdbc:mysql://dev-vestige-vestigedb.c63tfr0piamf.ap-southeast-1.rds.amazonaws.com:3306/vestige_wms?useSSL=false
+datasources.replicads.username=dev_wmsuserread
+datasources.replicads.password=vestige123
+datasources.replicads.maximumPoolSize=30
+datasources.replicads.connectionTimeout=50000
+datasources.replicads.idleTimeout=40000
+datasources.replicads.maxLifetime=100000
+datasources.replicads.minimum-idle=6
+
+datasources.readds.jdbcUrl= jdbc:mysql://dev-vestige-vestigedb.c63tfr0piamf.ap-southeast-1.rds.amazonaws.com:3306/vestige_wms?useSSL=false
+datasources.readds.username=dev_wmsuserread
+datasources.readds.password=vestige123
+datasources.readds.maximumPoolSize=30
+datasources.readds.connectionTimeout=50000
+datasources.readds.idleTimeout=40000
+datasources.readds.maxLifetime=100000
+datasources.readds.minimum-idle=6
+
+datasources.writeds.jdbcUrl=jdbc:mysql://dev-vestige-vestigedb.c63tfr0piamf.ap-southeast-1.rds.amazonaws.com:3306/vestige_wms?useSSL=false
+datasources.writeds.username=dev_wmsuser
+datasources.writeds.password=vestige123
+datasources.writeds.maximumPoolSize=30
+datasources.writeds.connectionTimeout=50000
+datasources.writeds.idleTimeout=40000
+datasources.writeds.maxLifetime=100000
+datasources.writeds.minimum-idle=6
+
+
+server.connection-timeout=50000
+spring.session.timeout=50000
+datasources.readds.hikari.connectionTimeout=30000
+datasources.readds.hikari.idleTimeout=60000
+datasources.readds.hikari.maxLifetime=160000
+datasources.readds.hikari.minimumIdle=10
+spring.datasource.hikari.connectionTimeout=30000
+spring.datasource.hikari.idleTimeout=600000
+spring.datasource.hikari.maxLifetime=1800000
+datasources.writeds.hikari.connectionTimeout=30000
+datasources.writeds.hikari.idleTimeout=60000
+datasources.writeds.hikari.maxLifetime=160000
+datasources.writeds.hikari.minimumIdle=10
+spring.datasource.hikari.validation-timeout=60000
+
+################# Redis Config ##################
+spring.redis.host=dev-vestige-redisseq.bfsppp.0001.apse1.cache.amazonaws.com
+spring.redis.port=6379
+spring.redis.timeout=600000
+spring.redis.user.dbid=10
+spring.redis.location.dbid=11
+spring.redis.replocation.dbid=12
+
+###########GRN ,RETURN,PO YEAR VALUE#######
+grnYear=22
+poInYear=22
+poGhYear=22
+poBdYear=21
+poSaYear=22
+poOmYear=21
+poBhYear=21
+poAeYear=22
+custReturnYear=22
